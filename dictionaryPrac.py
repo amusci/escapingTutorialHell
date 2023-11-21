@@ -30,8 +30,26 @@ def twoMeatOneMeat(d1, d2):
     oneMeat = {**d1, **d2}
     print(oneMeat)
 
-#def describeOneMeat(meat)
+def describeOneMeat():
+    sampleDict = {
+        "class": {
+            "student": {
+                "name": "Mike",
+                "marks": {
+                    "physics": 70,
+                    "history": 80
+                }
+            }
+        }
+    }
+
+    # understand how to locate the nested key
+    # sampleDict['class'] = {'student': {'name': 'Mike', 'marks': {'physics': 70, 'history': 80}}}
+    # sampleDict['class']['student'] = {'name': 'Mike', 'marks': {'physics': 70, 'history': 80}}
+    # sampleDict['class']['student']['marks'] = {'physics': 70, 'history': 80}
+
+    print(sampleDict['class']['student']['marks']['history'])
 
 
 if __name__ == "__main__":
-    twoMeatOneMeat(dict1, dict2)
+    describeOneMeat()
