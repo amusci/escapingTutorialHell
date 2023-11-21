@@ -11,6 +11,10 @@ def twoListsOneMeat(l1, l2):
     meat = dict(zip(l1, l2))
     print(meat)
 
+def twoMeatOneMeat(l1,l2):
+    oneMeat = {**l1, **l2}
+    print(oneMeat)
+
 
 if __name__ == "__main__":
-    twoListsOneMeat(keys, values)
+    twoMeatOneMeat(dict1, dict2)
