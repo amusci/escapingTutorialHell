@@ -6,17 +6,8 @@ values = [10, 20, 30]
 dict1 = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
 dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
 
-sampleDict = {
-    "class": {
-        "student": {
-            "name": "Mike",
-            "marks": {
-                "physics": 70,
-                "history": 80
-            }
-        }
-    }
-}
+employees = ['Kelly', 'Emma']
+defaults = {"designation": 'Developer', "salary": 8000}
 
 
 def twoListsOneMeat(l1, l2):
@@ -29,6 +20,7 @@ def twoMeatOneMeat(d1, d2):
     # combines two meat to one meat
     oneMeat = {**d1, **d2}
     print(oneMeat)
+
 
 def describeOneMeat():
     sampleDict = {
@@ -51,5 +43,10 @@ def describeOneMeat():
     print(sampleDict['class']['student']['marks']['history'])
 
 
+def diffKeysSameValues(l1, d1):
+    out = dict.fromkeys(l1, d1)
+    print(out)
+
+
 if __name__ == "__main__":
-    describeOneMeat()
+    diffKeysSameValues(employees, defaults)
