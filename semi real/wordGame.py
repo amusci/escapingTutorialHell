@@ -1,12 +1,24 @@
 # word guessing game ig
 import random
 
-words = ['yup', 'sup', 'one', 'two', 'three', 'population', 'bomb']
+wordList = ['yup', 'sup', 'one', 'two', 'three', 'population', 'bomb']
 count = 0
-def welcomeHoe():
+
+def getRandomWord(wordList):
+    # This function returns a random string from the passed list of  strings.
+    wordIndex = random.randint(0, len(wordList) - 1)
+    return wordList[wordIndex]
 
 
 if __name__ == "__main__":
-    print('WELCOME TO DA GUESSING GAME HOE')
-    inp = input('Guess a letter: ')
+    getRandomWord(wordList)
+
+
+
+
+
+
+
+
+
 
