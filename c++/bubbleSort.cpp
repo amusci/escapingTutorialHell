@@ -4,6 +4,7 @@
 
 
 using namespace std;
+int temp;
 
 
 void b_sort(int arr[], int length) {
@@ -17,8 +18,12 @@ void b_sort(int arr[], int length) {
 
             if (arr[j] > arr[j+1]) { // this checks if the element is greater than the next one
 
-                swap(arr[j], arr[j+1]); // if so, swap them
+                //swap(arr[j], arr[j+1]); // if so, swap them
+
                 swapped = true; // make sure program continues
+                temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
             }
 
         }
