@@ -8,4 +8,3 @@ bool lessThanOrEqualToZero(int num) {
 		return false;
 	}
 
-	
