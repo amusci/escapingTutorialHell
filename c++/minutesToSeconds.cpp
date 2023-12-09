@@ -6,8 +6,6 @@
 using namespace std;
 
 
-// return_statement2.cpp
-#include <stdio.h>
 
 int convert( int minutes )
 {
