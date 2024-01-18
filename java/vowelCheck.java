@@ -12,10 +12,7 @@ private static int vowelCheck(String str) {
             count++;
         }
 
-
-
     }
-
 
     return count;
 }
