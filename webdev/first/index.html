@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yeahbuddy</title>
+    <title>Fetch Input</title>
 </head>
 <body>
     <input type="text" id="textInput" placeholder="Enter text">
+    <div id="output"></div> <!-- This div will show the input value -->
     
     <script>
         // Get the input field element
         const inputField = document.getElementById('textInput');
+
+        // Get the div element where the input value will be displayed
+        const outputDiv = document.getElementById('output');
 
         // Add an event listener to listen for changes in the input field
         inputField.addEventListener('input', function(event) {
             // Retrieve the value entered in the input field
             const inputValue = event.target.value;
 
-            // Print the input value to the console
-            console.log(inputValue);
+            // Display the input value in the output div
+            outputDiv.textContent = inputValue;
         });
     </script>
 </body>
