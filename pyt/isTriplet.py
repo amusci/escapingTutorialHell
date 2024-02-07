@@ -1,10 +1,9 @@
 def is_triplet(n1, n2, n3):
+    a1 = max(n1, n2, n3)
+    a2 = min(n1, n2, n3)
+    a3 = (n1 + n2 + n3) - a1 - a2
 
-    nums = [n1, n2, n3]
-
-    nums.sort()
-    check = (nums[0] ** 2) + (nums[1] ** 2)
-    if check == (nums[2] ** 2):
-        return True
-    else:
+    if (a2 ** 2) + (a3 ** 2) != a1 ** 2:
         return False
+    else :
+        return True
