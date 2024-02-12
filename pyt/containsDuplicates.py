@@ -7,3 +7,10 @@ def contains_duplicateSet(nums):
         seen.add(num) # ties to the for loop, adding numbers to the set
 
     return False # return false if no duplicates
+
+def contains_duplicatesSort(nums):
+    nums.sort()  # sort the list
+    for i in range(1, len(nums)):  # interate through the list
+        if nums[i] == nums[i - 1]:  # if index 2 == index 1
+            return True  # return true if dups
+    return False  # return false if no dups
