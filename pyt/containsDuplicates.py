@@ -18,10 +18,19 @@ def contains_duplicatesSort(nums):
 
 
 def contains_duplicatesBF(nums):
-    n = len(nums)
-    for i in range(n - 1):
-        for j in range(i + 1, n):
-            print(nums[i], nums[j])
-            if nums[i] == nums[j]:
-                return True
-    return False
+    n = len(nums) # n is the length of the list
+    for i in range(n - 1): # iterate through list
+        for j in range(i + 1, n): # use second pointer
+            if nums[i] == nums[j]: # compare two pointers
+                return True # return true
+    return False # return false
+
+
+def contains_duplicatesHM(nums):
+    seen = {}  # create a hashmap
+    for num in nums:  # iterate through list
+        if num in seen and seen[num] >= 1:  # if num is in hasmap and the keys >= 1
+            return True  # return true, this would mean there are duplicates
+        seen[num] = seen.get(num, 0) + 1  # increase count in the map
+    return False  # return false since no dups
+
