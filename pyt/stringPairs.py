@@ -9,7 +9,7 @@ def string_pairs(s):
             pairs.append(s[i:i + 2])  # append the pairs (0:2) (2:4) etc
     else:
         for i in range(0, n - 1, 2):  # iterate 0 to n-1 every 2 (n-1 allows to get the even pairs
-            # (this will allow the ability to add the *))
+            # (this will allow the ability to add the *))c
             pairs.append(s[i:i + 2])  # append the pairs (0:2) (2:4) etc
         pairs.append(s[-1] + '*')  # at the end, get the last index and then add an asterisk
 
