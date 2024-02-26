@@ -7,7 +7,6 @@ This means you add 0 to the number at index 0, add 1 to the number at index 1, e
 """
 
 def add_indexes(lst):
-    yeah = []
-    for i,j in enumerate(lst):
-        yeah.append(i + j)
-    return yeah
+    return [i+j for i,j in enumerate(lst)]
+
+
