@@ -10,3 +10,8 @@ def add_indexes(lst):
     return [i+j for i,j in enumerate(lst)]
 
 
+    """
+    yeah = []
+    for i,j in enumerate(lst):
+        yeah.append(i + j)
+    return yeah"""
