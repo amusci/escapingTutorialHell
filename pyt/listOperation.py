@@ -14,8 +14,4 @@ Return an empty list if there are no numbers that are divisible by n.
 
 
 def list_operation(x, y, n):
-    ans = []
-    for i in range(x,y + 1):
-        if i % n == 0:
-            ans.append(i)
-    return ans
+    return [i for i in range(x, y + 1) if not i % n]
