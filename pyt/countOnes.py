@@ -8,10 +8,4 @@ the return value should be 2.
 
 
 def count_ones(num):
-    count = 0
-    binary = bin(num)
-    for i in binary:
-        if i == '1':
-            count += 1
-
-    return count
+    return bin(num).count('1')
