@@ -9,10 +9,5 @@ A number is symmetrical when it is the same as its reverse.
 
 
 def is_symmetrical(num):
-    n = len(str(num))
-    if n == 1:
-        return True
-    else:
-        if str(num)[::-1] == str(num):
-            return True
-    return False
+    return str(num)[::-1] == str(num)
+
