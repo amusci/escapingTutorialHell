@@ -8,11 +8,4 @@ Your task is to create a function that takes a string and returns True if the PI
 
 
 def is_valid_PIN(pin):
-    n = len(pin)
-    if n == "":
-        return False
-    elif n == 4 or n == 6:
-        if pin.isdigit():
-            return True
-
-    return False
+    return (len(pin) == 4 or len(pin) == 6) and pin.isdigit()
