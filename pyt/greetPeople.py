@@ -11,10 +11,4 @@ The solution should be one string with a comma in between every "Hello (Name)".
 """
 
 def greet_people(names):
-    ans = []
-
-    if names:
-        for name in names:
-            ans.append("Hello " + name)
-
-    return ', '.join(ans)
+    return ' ,'.join(["Hello " + name for name in names])
