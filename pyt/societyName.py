@@ -10,10 +10,8 @@ Create a function that takes in a list of names and returns the name of the secr
 
 
 def society_name(friends):
-    lst = []
+    friends.sort()
+    name = ''
     for friend in friends:
-        lst += friend[0]
-
-    sorted_lst = sorted(lst)
-
-    return ''.join(sorted_lst)
+        name += friend[0]
+    return name
