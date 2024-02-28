@@ -13,9 +13,8 @@ and the list of correctly-typed words and outputs a list containing 1s (correctl
 
 def correct_stream(user, correct):
     ans = []
-    length = len(correct)
-    for i in range(length):
-        if user[i] == correct[i]:
+    for x,y in zip(user,correct):
+        if x == y:
             ans.append(1)
         else:
             ans.append(-1)
