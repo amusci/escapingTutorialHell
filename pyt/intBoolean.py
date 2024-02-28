@@ -7,10 +7,4 @@ Iterating through the number one digit at a time, append True if the digit is 1 
 """
 
 def integer_boolean(n):
-    ans = []
-    for i in n:
-        if i == "0":
-            ans.append(False)
-        else:
-            ans.append(True)
-    return ans
+    return [i == '1' for i in n]
