@@ -9,8 +9,4 @@ Create a function that takes a number and returns True if the number is automorp
 """
 
 def is_automorphic(n):
-    squared = n ** 2
-
-    if str(squared).endswith(str(n)):
-        return True
-    return False
+    return str(n ** 2).endswith(str(n))
