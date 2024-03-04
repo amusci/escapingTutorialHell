@@ -8,7 +8,5 @@ def letter_counter(lst, letter):
     count = 0
 
     for i in lst:
-        for j in range(0,6):
-            if i[j] == letter:
-                count+=1
+        count += i.count(letter)
     return count
