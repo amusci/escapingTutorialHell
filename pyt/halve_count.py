@@ -6,8 +6,10 @@ Given two integers a and b, return how many times a can be halved while still be
 
 
 def halve_count(a, b):
-    n = a / 2
-    if n > b:
-        return 1 + halve_count(n, b)
-    else:
-        return 0
+    n = 0
+
+    while a / 2 > b:
+        n += 1
+        a /= 2
+
+    return n
