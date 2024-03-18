@@ -12,4 +12,4 @@ def equal(a, b, c):
     if len(unique) == 3:
         return 0
     else:
-        return (4 - len(unique))
+        return 4 - len(unique)
