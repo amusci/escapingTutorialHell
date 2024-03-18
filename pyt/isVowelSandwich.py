@@ -11,10 +11,4 @@ In order to have a valid sandwich, the string must satisfy the following rules:
 
 
 def is_vowel_sandwich(s):
-    vowels = "aeiou"
-    if len(s) != 3:
-        return False
-    elif s[1] in vowels and s[0] not in vowels and s[2] not in vowels:
-        return True
-    else:
-        return False
+    return [c in "aeiou" for c in s] == [False, True, False]
