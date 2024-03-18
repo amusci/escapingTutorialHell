@@ -8,11 +8,5 @@ Use the standard distance formula for n-dimensional Cartesian coordinates.
 
 """
 
-
 def can_alternate(s):
-    zero_count = s.count('0')
-    one_count = s.count('1')
-    if abs(zero_count - one_count) >=2:
-        return False
-    else:
-        return True
+    return s.count("0") - s.count("1") in [-1, 0, 1]
