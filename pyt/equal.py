@@ -8,9 +8,8 @@ and returns the amount of integers which are of equal value.
 
 
 def equal(a, b, c):
-    if a == b == c:
-        return 3
-    elif a == b or b == c or a == c:
-        return 2
-    else:
+    unique = set([a, b, c])
+    if len(unique) == 3:
         return 0
+    else:
+        return (4 - len(unique))
