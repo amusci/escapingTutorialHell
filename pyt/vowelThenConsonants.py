@@ -6,14 +6,8 @@ For any character that's not a vowel (like special characters or spaces), treat 
 
 """
 
-
 def split(txt):
-    vowel_string = ''
-    vowel_list = 'aeiou'
-    con_string = ''
-    for char in txt:
-        if char in vowel_list:
-            vowel_string += char
-        else:
-            con_string += char
-    return vowel_string + con_string
+    vowel = ''.join(ch for ch in txt if ch in 'aeiou')
+    con = ''.join(ch for ch in txt if ch not in 'aeiou')
+
+    return vowel + con
