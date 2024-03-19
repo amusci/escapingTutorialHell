@@ -10,7 +10,7 @@ If Bob is not in the list, return -1.
 
 
 def find_bob(names):
-    for index,name in enumerate(names):
-        if name == 'Bob':
-            return index
-    return -1
+    try:
+        return names.index('Bob')
+    except:
+        return -1
