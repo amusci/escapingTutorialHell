@@ -8,15 +8,11 @@
 
 def first_arg(*nums):
     if nums:
-
         return nums[0]
-    else:
-        return None
+    return None
 
 
 def last_arg(*nums):
     if nums:
-
         return nums[-1]
-    else:
-        return None
+    return None
