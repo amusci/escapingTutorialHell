@@ -21,7 +21,4 @@ def abcmath(a, b, c):
     ans = a
     for _ in range(b - 1):
         ans += ans
-    if ans % c == 0:
-        return True
-    else:
-        return False
+    return ans % c == 0
