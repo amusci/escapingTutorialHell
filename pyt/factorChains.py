@@ -20,13 +20,10 @@ def factor_chain(lst):
     length = len(lst)
 
     for i in range(length - 1):
-        if lst[i + 1] % lst[i] == 0:
-            count += 1
+        if lst[i + 1] % lst[i] != 0:
+            return False
+    return True
 
-    if count == length - 1: # -1 because it only loops length - 1 times if true
-        return True
-    else:
-        return False
 
 
 if __name__ == "__main__":
