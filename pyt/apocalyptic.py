@@ -16,5 +16,5 @@ def apocalyptic(n):
     if satan in str(idk):
         x = str(idk).find(satan)
 
-        return ("Repent! " + str(x) + " days until the Apocalypse!")
+        return f("Repent! {x} days until the Apocalypse!")
     return "Crisis averted. Resume sinning."
