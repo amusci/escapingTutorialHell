@@ -21,6 +21,4 @@ def high_low(txt):
 
     for num in nums:
         ans.append(int(num))
-    high = max(ans)
-    low = min(ans)
-    return "{} {}".format(high, low)
+    return "{} {}".format(max(ans), min(ans))
