@@ -20,17 +20,8 @@ Create a function which calculates the remaining mass and the number of years th
 '''
 
 
-def decay(m, n):
-    ans = m
-    for i in range(n):
-        ans /= 2
-
-    return ans
-
-
 def halflife_calculator(mass, hlife, n):
-    mass_decay = decay(mass, n)
-    return [round(mass_decay, 3), round(hlife * n, 3)]
+    return [round(mass / n * 2, 3), hlife * n]
 
 
 if __name__ == "__main__":
