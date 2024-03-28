@@ -19,16 +19,7 @@ ascii_sort(["victory", "careless"]) ➞ "victory"
 
 
 def ascii_sort(lst):
-    word1_sum = 0
-    word2_sum = 0
-    word1 = lst[0]
-    word2 = lst[1]
-    for i in word1:
-        word1_sum += ord(i)
-    for j in word2:
-        word2_sum += ord(j)
-    print(word1_sum, word2_sum)
-    if word1_sum < word2_sum:
-        return word1
-    else:
-        return word2
+
+    word1 = sum(ord(i) for i in lst[0])
+    word2 = sum(ord(j) for j in lst[1])
+    return lst[0] if word1 < word2 else lst[1]
