@@ -10,6 +10,5 @@ Note that multiple digits next to each other are counted as a whole number rathe
 
 
 def grab_number_sum(s):
-    total = 0
     nums = re.findall(r'\d+', s)
     return sum(map(int,nums))
