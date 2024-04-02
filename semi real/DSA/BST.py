@@ -77,6 +77,15 @@ class TreeNode:
         if self.right:  # if right node exists
             self.right.preorder_traversal()  # call the function (printing the node and moving onto the next)
 
+    def postorder_traversal(self):
+        if self.left:  # if left node exists
+            self.left.postorder_traversal()  # continue until we find the most left node
+        if self.right:  # if right node exists
+            self.right.postorder_traversal()  # continue until we find the most right node
+        print(self.value)  # this print will print in a left, right, root order.
+        #  since we are recursively going to the most left node, it will print in a left, right,
+        #  root order
+
 
 tree = TreeNode(10)
 tree.insert(4)
@@ -89,6 +98,9 @@ tree.insert(77)
 
 # print(tree.right.right.right.left.value)  # this will be 16
 # tree.inorder_traversal()  # this will be 4, 8, 10, 11, 12, 16, 55, 77
-tree.preorder_traversal() # this will be (leftside) 10, 4, 8 (rightside) 11,12,55,16,77
+# tree.preorder_traversal() # this will be (leftside) 10, 4, 8 (rightside) 11,12,55,16,77
+tree.postorder_traversal() # this will be (leftside) 8,4 (rightside) 16,77,55,12,11,10 (10 is the root so it is
+# printed last
+
 
 # https://www.cs.usfca.edu/~galles/visualization/BST.html
