@@ -1,4 +1,5 @@
 '''
+https://youtu.be/DlWxqU3LLpY
 
 Binary Tree:
 
@@ -69,6 +70,13 @@ class TreeNode:
             #  note that we do NOT do another print, as we will print the left before the right, allowing it to be in
             #  the correct order
 
+    def preorder_traversal(self):
+        print(self.value)  # print the node that it is on
+        if self.left:  # if left node exists
+            self.left.preorder_traversal()  # call the function (this will print the node and then move onto the next)
+        if self.right:  # if right node exists
+            self.right.preorder_traversal()  # call the function (printing the node and moving onto the next)
+
 
 tree = TreeNode(10)
 tree.insert(4)
@@ -80,6 +88,7 @@ tree.insert(16)
 tree.insert(77)
 
 # print(tree.right.right.right.left.value)  # this will be 16
-tree.inorder_traversal()  # this will be 4, 8, 10, 11, 12, 16, 55, 77
+# tree.inorder_traversal()  # this will be 4, 8, 10, 11, 12, 16, 55, 77
+tree.preorder_traversal() # this will be (leftside) 10, 4, 8 (rightside) 11,12,55,16,77
 
 # https://www.cs.usfca.edu/~galles/visualization/BST.html
