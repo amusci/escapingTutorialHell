@@ -86,6 +86,23 @@ class TreeNode:
         #  since we are recursively going to the most left node, it will print in a left, right,
         #  root order
 
+    def find(self, value):
+
+        if value < self.value:  # if the value we're looking for is less than the node (we go to the left)
+            if self.left is None:  # if the node to the left is empty
+                return False  # obviously not there
+            else:
+                return self.left.find(value)  # recursively searches for the left value in the left subtree
+
+        elif value > self.value:  # if the value is greater than the node (we go right)
+            if self.right is None:  # if the node to the right is empty
+                return False  # not there
+            else:
+                return self.right.find(value)  # recursively searches for the right value in the right subtree
+
+        else:
+            return True  # this else means value we are looking for == the value of that node, so it is True
+
 
 tree = TreeNode(10)
 tree.insert(4)
@@ -99,8 +116,9 @@ tree.insert(77)
 # print(tree.right.right.right.left.value)  # this will be 16
 # tree.inorder_traversal()  # this will be 4, 8, 10, 11, 12, 16, 55, 77
 # tree.preorder_traversal() # this will be (leftside) 10, 4, 8 (rightside) 11,12,55,16,77
-tree.postorder_traversal() # this will be (leftside) 8,4 (rightside) 16,77,55,12,11,10 (10 is the root so it is
+# tree.postorder_traversal() # this will be (leftside) 8,4 (rightside) 16,77,55,12,11,10 (10 is the root so it is
 # printed last
-
+print(tree.find(77))  # True
+print(tree.find(1))  # False
 
 # https://www.cs.usfca.edu/~galles/visualization/BST.html
