@@ -8,10 +8,8 @@ DO NOT USE STRINGS
 
 def num_of_digits(num):
 
-    if num == 0:
-        return 1
-    count = 0
-    while abs(num) >= 1:
+    count = 1
+    while abs(num) // 10 > 0:
         count += 1
-        num /= 10
+        num //= 10
     return count
