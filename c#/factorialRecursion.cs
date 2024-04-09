@@ -1,12 +1,12 @@
     public static int Factorial(int num)
 
     {
-        if (num == 1) 
+        if (num == 1 || num == 0) 
         {
             return 1;
         }
 
-        num = num * Factorial(num - 1);
-        return num;
+       
+        return num * Factorial(num - 1);
 
     }
