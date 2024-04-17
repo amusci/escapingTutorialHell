@@ -11,7 +11,7 @@
 
             {
 
-                ans[i] = num  (i + 1);;
+                ans[i] = num  (i + 1);
 
             }
 
