@@ -15,10 +15,7 @@
                 Console.WriteLine(restDays + " before ");
                 restDays ++;
                 Console.WriteLine(restDays);
-
-
             }
-
 
             return total + restDays - 1;
                 
