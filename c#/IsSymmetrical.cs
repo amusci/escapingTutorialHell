@@ -9,15 +9,7 @@
         {
 
             string numToString = num.ToString();
-            int half = numToString.Length / 2;
-            string firstHalf = numToString.Substring(0, half);
-            string secondHalf = numToString.Substring(numToString.Length - half);
-            
-            char[] secondHalfToCharArray = secondHalf.ToCharArray();
-            Array.Reverse(secondHalfToCharArray);
-            string reversedSecondHalf = new string(secondHalfToCharArray);
 
-
-            return firstHalf.Equals(reversedSecondHalf);
+            return numToString.SequenceEqual(numToString.Reverse());
 
         }
