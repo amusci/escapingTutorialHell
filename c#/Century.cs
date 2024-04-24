@@ -6,50 +6,19 @@
         */
         {
 
-            int century = (year - 1) / 100 + 1;
+            double century = year / 100;
 
-            string suffix = "";
-
-            switch (century) 
+            if (century <= 20)
             {
 
-                case 11:
-                case 12:
-                case 13:
-                case 14:
-                case 15:
-                case 16:
-                case 17:
-                case 18:
-                case 19:
-
-                    suffix = "th";
-                    break;
-                default:
-                    switch(century % 10)
-                    {
-
-                        case 1:
-                            suffix = "st";
-                            break;
-                        case 2:
-                            suffix = "nd";
-                            break;
-                        case 3:
-                            suffix = "rd";
-                            break;
-                        default:
-                            suffix = "th";
-                            break;
-
-                    }
-                    break;
-
+                return Math.Ceiling(century) + "th century";
 
             }
+            else
+            {
 
-            return century + suffix + " century";
+                return Math.Ceiling(century) + "st century";
 
-
+            }
 
         }
