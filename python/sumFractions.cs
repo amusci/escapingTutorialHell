@@ -13,21 +13,15 @@ sum_fractions([[11, 2], [3, 4], [5, 4], [21, 11], [12, 6]]) ➞ 11
 
 
 def sum_fractions(lst):
-    numerator = []
-    denominator = []
-    result = 0
-
+    total = 0
     for i in lst:
-        numerator.append(i[0])
-        denominator.append(i[1])
+        total += i[0] / i[1]
 
-    for i in range(len(numerator)):
-        result += numerator[i] / denominator[i]
-    return round(result)
+    return round(total)
 
 
 
 
 
-
+print(sum_fractions([[11, 2], [3, 4], [5, 4], [21, 11], [12, 6]]))
 
