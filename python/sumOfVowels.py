@@ -12,13 +12,14 @@ U	      0
 
 
 def sum_of_vowels(sentence):
+    lwr = sentence.lower()
     count = 0
-    for char in sentence:
-        if char == "A" or char == "a":
+    for char in lwr:
+        if char == "a":
             count += 4
-        elif char == "E" or char == "e":
+        elif char == "e":
             count += 3
-        elif char == "I" or char == "i":
+        elif char == "i":
             count += 1
     return count
         
