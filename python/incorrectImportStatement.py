@@ -10,7 +10,8 @@ Given a string of an incorrect import statement, return the fixed string. All im
 
 
 def fix_import(s):
-    return "from " + s.split(" ")[-1] + " import " + s.split(" ")[1]
+    split = s.split()
+    return "from " + split[-1] + " import " + split[1]  
 
 
 if __name__ == "__main__":
