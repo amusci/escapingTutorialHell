@@ -7,20 +7,6 @@ Create a function that returns whether the first array is slightly superior to t
 
 function isFirstSuperior(arr1, arr2) {
 
-    for (let i = 0; i < arr1.length; i++) {
-
-        if (arr1[i] > arr2[i]) {
-
-            return true;
-
-        } else if (arr1[i] < arr2[i]) {
-
-
-            return false;
-        }
-
-    }
-
-    return false;
+	return arr1 > arr2
 	
 }
