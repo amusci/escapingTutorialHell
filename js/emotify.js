@@ -13,23 +13,16 @@ function emotify(str) {
 
     const words = str.split(' ');
 
-    if (words[2] === "smile") {
+    let emotify = {
 
-        return "Make me :D"
-
-    } else if (words[2] === "grin") {
-
-        return "Make me :)"
-
-    } else if (words[2] === "sad") {
-
-        return "Make me :(";
-
-    } else if (words[2] === "mad") {
-
-        return "Make me :P";
+        "smile": ":D",
+        "grin": ":)",
+        "sad": ":(",
+        "mad": ":P"
 
     }
+
+    return "Make me " + emotify[words[2]]
 
 	
 }
